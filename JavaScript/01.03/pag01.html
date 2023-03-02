@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const dobro = x => x*2
+        // console.log(dobro(9))
+
+        let vet1 = [18,20,30,40]
+        let vet2 = [1,2,3,4]
+        
+        //Ex.1 da Lista 01
+        const somar = vet => {
+            let soma = 0;
+            for(let i = 0; i < vet.length;i++)
+                soma += vet[i];
+            return soma;
+        }
+        console.log("Soma: ",somar(vet1))
+        console.log("Soma: ",somar(vet2))
+
+        //Ex.2 Letra A
+        const media = vet => somar(vet) / vet.length
+        console.log("Media: ", media(vet1))
+
+        //Ex. 2 Letra B
+        const maior = vet => {
+            let maior = vet[0]
+            for(let i = 0; i < vet.length; i++){
+                if(vet[i] > maior)
+                    maior = vet[i]
+            }
+            return maior
+        }
+        console.log("Maior: ", maior(vet1))
+
+        //Ex. 2 Letra C
+        const impar = vet => {
+            return vet.filter(x => x%3)
+        }
+        console.log("impar")
+        impar(vet2)
+
+        //Ex. 2 Letra D
+        const maiorDeIdade = vet => {
+            for(let i = 0; i < vet.length; i ++) {
+                if(vet[i] < 18) {
+                    return false
+                }
+            }
+            return true;            
+        }
+        console.log("Todos são maiores de idade? ", maiorDeIdade(vet1))
+
+        //Ex. 2 Letra E
+        let valor = 50
+        const verificaIdade = (vet, idade) => {
+            for(let i = 0; i < vet.length; i ++) {
+                if(vet[i] < idade) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log("Idade: ", valor)
+        console.log(verificaIdade(vet1, valor))
+
+        //Ex. 2 Letra F
+        const verificaMaiorIgual = (vet, idade) => {
+            for(let i = 0; i < vet.length; i ++) {
+                if(vet[i] >= idade) {
+                    console.log(vet[i])
+                }
+            }
+        }
+        console.log("verifica Maior Igual: ", valor)
+        verificaMaiorIgual(vet1, valor)
+
+        //Ex. 2 Letra G
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
