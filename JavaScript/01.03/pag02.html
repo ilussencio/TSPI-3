@@ -5,25 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        // vet = [10,20,30];
-        // vet.forEach(x => console.log(x));
-        
-        vet2 = [5,12,18,22,9]
-        // vet2.forEach((x,i,vet) => {
-        //     if(x >= 18)
-        //         console.log(`${i}:${x}:${vet}`)
-        // });
-
-        // vet = [1,2,3,4,5];
-        // vet = vet.map(elemento => elemento*2);
-        // console.log(vet);
-        vet = vet2.filter(x => !(x%2))
-        console.log(vet)
-       
-    </script>
+    
 </head>
 <body>
     
 </body>
+
+<script>
+    //LISTA 02
+    idades = [18,20,21,32,63, 128]
+    idade = prompt("entre com uma idade")
+    document.write(`<p> Vetor: ${idades} </p>`);
+    const soma = idades.reduce((soma, x) => soma + x)
+    document.write(`<p> Soma = ${soma} </p>`);
+
+    const mediaSimples = idades.reduce((soma, x) => soma + x) / idades.length
+    document.write(`<p> Media simples = ${mediaSimples} </p>`);
+
+    const maiorIdade = idades.reduce((maior, x) => (x > maior)? maior=x:maior,idades[0])
+    document.write(`<p> Maior idade = ${maiorIdade}</p>`);
+
+    const impares = idades.filter(x => x % 2 != 0)
+    document.write(`<p> Idades Impares = ${impares}</p>`);
+
+    const maioresDeIdade = idades.every(x => x >= 18)
+    document.write(`<p> Maior de idade = ${maioresDeIdade}</p>`);
+
+    const maiorIgual = idades.every(x => x >= idade)
+    document.write(`<p> Maior ou igual idade informada = ${maiorIgual}</p>`);
+
+    const exibirMairIgual = idades.filter(x => x >= idade)
+    document.write(`<p> Maior ou igual idade informada = ${exibirMairIgual}</p>`);
+
+    const media = idades.filter(x => x >= idade).reduce((soma, x) => soma += x,0) / idades.filter(x => x >= idade).length
+    document.write(`<p> Media maior ou igual idade = ${media}</p>`);
+
+
+   
+</script>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let nomes = ["Wilton de Paula Filho", "Maria Jose da Silva", "Ana Maria"];
+    const getFirstLastNames = vet => {
+        return vet.map((x) => {
+            let splited = x.split(" ");
+            return splited[0] + " " + splited[splited.length-1];
+        });
+    }
+    console.log(getFirstLastNames(nomes));
+
+    let vetor1 = [10, 4, 8, 7, 1, 20];
+    let vetor2 = [0, 41, 13, 7, 1, 20];
+    let vetor3 = [21, 33, 43, 19, 87];
+    const somarImpares = vet => vet.reduce((soma, x) => (x % 2 != 0)?soma += x:soma, 0);
+
+    console.log(somarImpares(vetor1));
+    console.log(somarImpares(vetor2));
+    console.log(somarImpares(vetor3));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

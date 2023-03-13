@@ -4,7 +4,7 @@ use theGame;
 #1)
 #a)
 select j.nickname, j.sexo, j.pontuacao, j.moedas, p.habilidade, a.dt_hora_aquisicao
-from jogador j 
+from Jogador j 
 	join adquire_poder a on a.cod_jogador = j.cod_jogador
 	join poder p on a.cod_poder = p.cod_poder
 order by a.dt_hora_aquisicao desc;

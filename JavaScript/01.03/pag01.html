@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // const dobro = x => x*2
-        // console.log(dobro(9))
+        let vet = [18,20,30,40,35,37]
+        let idade = prompt("Informe uma idade")
 
-        let vet1 = [18,20,30,40]
-        let vet2 = [1,2,3,4]
+        document.write(`<p> Vetor = ${vet} </p>`);
         
         //Ex.1 da Lista 01
         const somar = vet => {
@@ -19,13 +18,12 @@
                 soma += vet[i];
             return soma;
         }
-        console.log("Soma: ",somar(vet1))
-        console.log("Soma: ",somar(vet2))
+        document.write(`<p>1) Soma = ${somar(vet)} </p>`);
 
         //Ex.2 Letra A
         const media = vet => somar(vet) / vet.length
-        console.log("Media: ", media(vet1))
-
+        document.write(`<p>2) a) Média aritmética = ${media(vet)} </p>`);
+        
         //Ex. 2 Letra B
         const maior = vet => {
             let maior = vet[0]
@@ -35,14 +33,19 @@
             }
             return maior
         }
-        console.log("Maior: ", maior(vet1))
-
+        document.write(`<p>2) b) A maior idade = ${maior(vet)} </p>`);
+  
         //Ex. 2 Letra C
         const impar = vet => {
-            return vet.filter(x => x%3)
+            impares = []
+            for(let i = 0; i < vet.length; i ++) {
+                if(vet[i] % 2 != 0) {
+                    impares.push(vet[i])
+                }
+            }
+            return impares
         }
-        console.log("impar")
-        impar(vet2)
+        document.write(`<p>2) c) impar = ${impar(vet)} </p>`);
 
         //Ex. 2 Letra D
         const maiorDeIdade = vet => {
@@ -53,10 +56,9 @@
             }
             return true;            
         }
-        console.log("Todos são maiores de idade? ", maiorDeIdade(vet1))
-
+        document.write(`<p>2) d) Maior idade = ${maiorDeIdade(vet)} </p>`);
+        
         //Ex. 2 Letra E
-        let valor = 50
         const verificaIdade = (vet, idade) => {
             for(let i = 0; i < vet.length; i ++) {
                 if(vet[i] < idade) {
@@ -65,22 +67,33 @@
             }
             return true
         }
-        console.log("Idade: ", valor)
-        console.log(verificaIdade(vet1, valor))
-
+        document.write(`<p>2) e) Maior idade = ${verificaIdade(vet, idade)} </p>`);
+        
         //Ex. 2 Letra F
         const verificaMaiorIgual = (vet, idade) => {
+            let maiores = []
             for(let i = 0; i < vet.length; i ++) {
                 if(vet[i] >= idade) {
-                    console.log(vet[i])
+                    maiores.push(vet[i])
                 }
             }
+            return maiores
         }
-        console.log("verifica Maior Igual: ", valor)
-        verificaMaiorIgual(vet1, valor)
 
+        document.write(`<p>2) f) Verifica idade informada e maior = ${verificaMaiorIgual(vet, idade)} </p>`);
+        
         //Ex. 2 Letra G
-
+        const mediaDasIdades = (vet, idade) => {
+            let soma = 0
+            for(let i = 0; i <= vet.length; i ++){
+                if(vet[i] >= idade)
+                    soma += vet[i]
+            }
+            return soma/vet.length
+        }
+        document.write(`<p>2) g) Media = ${mediaDasIdades(vet, idade)} </p>`);
+        
+        
     </script>
 </head>
 <body>
