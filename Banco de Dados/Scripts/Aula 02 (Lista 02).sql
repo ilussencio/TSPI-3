@@ -61,8 +61,11 @@ from pib_estado pe
 	join estado e on e.id = pe.id_estado
 where
 	pe.ano_pib = '2015'
-	and pe.valor_pib > (select valor_pib from pib_estado pe2 where id_estado = 9 and ano_pib = '2015');
-	
+	and pe.valor_pib > (select pe.valor_pib
+						from estado e 
+							join pib_estado pe on e.id = pe.id_estado 
+						where e.nome = 'Goias' and pe.ano_pib = '2015');
+
 -- i. Listar os estados que tiveram PIB abaixo da média no ano de 2017.
 select e.*
 from pib_estado pe
