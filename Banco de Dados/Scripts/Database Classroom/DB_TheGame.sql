@@ -1,3 +1,4 @@
+-- drop database theGame;
 create database theGame;
 use theGame;
 
@@ -29,13 +30,14 @@ insert into poder values
 (6,"Jato de Bolhas"),
 (7,"Redomoinho");
 
+
 create table Adquire_poder(
 cod_aquisicao int primary key,
 cod_jogador int,
 cod_poder int,
 dt_hora_aquisicao datetime,
 foreign key(cod_jogador) references Jogador(cod_jogador),
-foreign key(cod_poder) references Poder(cod_poder));
+foreign key(cod_poder) references poder(cod_poder));
 
 insert into Adquire_poder values
 (1,1,1,"2021-06-20 19:00:00"),
@@ -46,6 +48,8 @@ insert into Adquire_poder values
 (6,3,4,"2021-06-25 12:00:00"),
 (7,3,5,"2021-06-26 08:00:00"),
 (8,4,6,"2021-06-26 12:00:00");
+
+
 
 create table Cenario(
 cod_cenario int primary key,

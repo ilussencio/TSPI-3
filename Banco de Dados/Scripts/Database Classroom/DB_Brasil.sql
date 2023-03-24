@@ -2,8 +2,7 @@
 create database brasil;
 
 use brasil;
-show tables;
-select * from cidade;
+
 
 --
 -- Estrutura da tabela estado

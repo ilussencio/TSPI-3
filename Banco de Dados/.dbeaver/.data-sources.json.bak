@@ -1,18 +1,40 @@
 {
 	"folders": {},
 	"connections": {
-		"mariaDB-186b8611477-1a9140dcd605f554": {
+		"mysql8-186e192d31d-644e76abc6d3fd21": {
 			"provider": "mysql",
-			"driver": "mariaDB",
-			"name": "localhost",
+			"driver": "mysql8",
+			"name": "DOCKER MYSQL",
 			"save-password": true,
 			"configuration": {
 				"host": "localhost",
 				"port": "3306",
-				"url": "jdbc:mariadb://localhost:3306/",
+				"url": "jdbc:mysql://localhost:3306/",
 				"configurationType": "MANUAL",
 				"type": "dev",
 				"auth-model": "native"
+			}
+		},
+		"oracle_thin-186e1a2573e-44d0a3e01da952f6": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "TOPFLEX LOCALHOST",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "1527",
+				"database": "XE",
+				"url": "jdbc:oracle:thin:@//localhost:1527/XE",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native",
+				"auth-properties": {
+					"oracle.logon-as": "sysdba"
+				}
 			}
 		}
 	},
