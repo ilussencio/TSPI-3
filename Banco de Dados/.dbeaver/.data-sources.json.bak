@@ -21,10 +21,10 @@
 			"name": "TOPFLEX LOCALHOST",
 			"save-password": true,
 			"configuration": {
-				"host": "localhost",
+				"host": "ilussencio.duckdns.org",
 				"port": "1527",
 				"database": "XE",
-				"url": "jdbc:oracle:thin:@//localhost:1527/XE",
+				"url": "jdbc:oracle:thin:@//ilussencio.duckdns.org:1527/XE",
 				"configurationType": "MANUAL",
 				"type": "dev",
 				"provider-properties": {

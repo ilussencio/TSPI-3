@@ -23,6 +23,7 @@ public class PersonService {
     public Page<Person> findAllPage(Pageable pageable){
         return repository.findAll(pageable);
     }
+
     public Optional<Person> findById(Long id){
         return repository.findById(id);
     }
@@ -42,7 +43,7 @@ public class PersonService {
         var dbPerson = repository.findById(id);
         if(dbPerson != null){
             repository.deleteById(id);
-            return "Peron Id " +id+ " has be deleted";
+            return "Person Id " +id+ " has be deleted";
         }
         return "Id "+id+" not found!";
     }
