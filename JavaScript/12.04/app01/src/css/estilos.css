@@ -1,0 +1,15 @@
+.centralizar {
+    text-align: center;
+}
+.avaliacaoCliente{
+    border: 2px solid black;
+    width: 300px;
+    background-color: lightgray;
+}
+
+.depoimentos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

@@ -212,7 +212,7 @@ FROM Participante
 INNER JOIN Acesso ON Participante.id_participante = Acesso.id_participante
 INNER JOIN Evento ON Acesso.id_evento = Evento.id_evento;
 
--- QUESTÃO 05
+-- QUESTÃO 06
 -- Lista de todos os participantes e organizadores cadastrados
 SELECT nome_participante AS nome, 'participante' AS tipo
 FROM Participante
@@ -232,7 +232,7 @@ LEFT JOIN Acesso ON Evento.id_evento = Acesso.id_evento
 WHERE Acesso.id_participante IS NULL
 ORDER BY nome_evento, nome_participante;
 
--- QUESTÃO 06
+-- QUESTÃO 07
 -- Participantes com acesso válido em um evento
 CREATE VIEW vw_participantes_acesso_valido AS
 SELECT Participante.nome_participante, Evento.nome_evento, Acesso.data_validade_inicio, Acesso.data_validade_fim
@@ -240,6 +240,8 @@ FROM Participante
 INNER JOIN Acesso ON Participante.id_participante = Acesso.id_participante
 INNER JOIN Evento ON Acesso.id_evento = Evento.id_evento
 WHERE Acesso.data_validade_inicio <= NOW() AND Acesso.data_validade_fim >= NOW();
+
+SELECT * FROM vw_participantes_acesso_valido;
 
 -- Quantidade de acessos por tipo em um evento
 CREATE VIEW vw_quantidade_acessos_por_tipo AS

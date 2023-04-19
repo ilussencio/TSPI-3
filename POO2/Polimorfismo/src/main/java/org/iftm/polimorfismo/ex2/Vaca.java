@@ -1,8 +1,11 @@
 package org.iftm.polimorfismo.ex2;
 
 public class Vaca extends Animal {
+    public Vaca() {
+    }
+
     @Override
-    public void emitirSom() {
-        System.out.println("Muu");
+    public void emitirsom(){
+        System.out.println("Muuu");
     }
 }

@@ -13,6 +13,9 @@
 				"configurationType": "MANUAL",
 				"type": "dev",
 				"auth-model": "native"
+			},
+			"custom-properties": {
+				"sql.format.keywordCase": "UPPER"
 			}
 		},
 		"oracle_thin-186e1a2573e-44d0a3e01da952f6": {
